@@ -2,6 +2,7 @@ package com.webrise.testproject.controller;
 
 import com.webrise.testproject.model.dto.UserDTO;
 import com.webrise.testproject.service.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,6 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
+@Tag(name = "UserController", description = "Работа с пользователями")
 public class UserController {
 
     private final UserService userService;

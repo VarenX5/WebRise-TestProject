@@ -2,6 +2,7 @@ package com.webrise.testproject.controller;
 
 import com.webrise.testproject.model.dto.UserSubscriptionDTO;
 import com.webrise.testproject.service.UserSubscriptionService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,6 +17,7 @@ import java.util.Set;
 @RestController
 @RequestMapping("/api/user/{userId}/subscription")
 @RequiredArgsConstructor
+@Tag(name = "UserSubscriptionController", description = "Работа с подписками пользователя")
 public class UserSubscriptionController {
 
     private final UserSubscriptionService userSubscriptionService;

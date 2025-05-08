@@ -1,7 +1,7 @@
 package com.webrise.testproject.controller;
 
-import com.webrise.testproject.exception.RestApiException;
 import com.webrise.testproject.model.dto.ExceptionDTO;
+import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 @RestControllerAdvice("com.webrise.testproject.controller")
 @Slf4j
 @AllArgsConstructor
+@Hidden
 public class ExceptionHandlerAdvice {
 
     @ExceptionHandler(Exception.class)
