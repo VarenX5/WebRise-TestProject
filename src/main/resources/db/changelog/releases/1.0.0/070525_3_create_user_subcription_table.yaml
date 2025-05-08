@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-create_user_subscription_table
+      author: varenX5
+      changes:
+        - createTable:
+            tableName: user_subscriptions
+            columns:
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: subscription_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+        - addPrimaryKey:
+            columnNames: user_id, subscription_id
+            constraintName: pk_user_subscriptions
+            tableName: user_subscriptions
+        - addForeignKeyConstraint:
+            baseColumnNames: user_id
+            baseTableName: user_subscriptions
+            constraintName: fk_user_subscriptions_user
+            referencedColumnNames: id
+            referencedTableName: users
+            onDelete: CASCADE
+        - addForeignKeyConstraint:
+            baseColumnNames: subscription_id
+            baseTableName: user_subscriptions
+            constraintName: fk_user_subscriptions_subscription
+            referencedColumnNames: id
+            referencedTableName: subscriptions
+            onDelete: CASCADE

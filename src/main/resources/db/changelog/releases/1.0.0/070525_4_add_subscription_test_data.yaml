@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-add-subscription-test-data
+      author: varenX5
+      changes:
+        - insert:
+            tableName: subscriptions
+            columns:
+              - column:
+                  name: name
+                  value: "Youtube Premium"
+        - insert:
+            tableName: subscriptions
+            columns:
+              - column:
+                  name: name
+                  value: "VK Музыка"
+        - insert:
+            tableName: subscriptions
+            columns:
+              - column:
+                  name: name
+                  value: "Яндекс Плюс"
+        - insert:
+            tableName: subscriptions
+            columns:
+              - column:
+                  name: name
+                  value: "Netflix"
+        - insert:
+            tableName: subscriptions
+            columns:
+              - column:
+                  name: name
+                  value: "Spotify"
+        - insert:
+            tableName: subscriptions
+            columns:
+              - column:
+                  name: name
+                  value: "Crunchyroll"
