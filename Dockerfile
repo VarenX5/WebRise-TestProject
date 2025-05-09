@@ -1,8 +1,4 @@
 FROM gradle:7.6.0-jdk17 AS build
-
-RUN apt-get update && apt-get install -y curl
-RUN curl -v https://repo.maven.apache.org/maven2/
-
 WORKDIR /app
 COPY gradlew .
 COPY gradle gradle
