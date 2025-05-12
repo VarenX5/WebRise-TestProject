@@ -16,6 +16,10 @@
 - Подписки (сущность Subscribe) генерируются при первом запуске при помощи liquebase.
 - Можно воспользоваться UI по пути: http://localhost:8080/swagger-ui/index.html
   
+### Состояние сервиса
+- Получение статуса сервиса: http://localhost:8080/actuator/health
+- Получение общей информации: http://localhost:8080/actuator/info
+  
 ## Технологии:
 
 - Язык: **Java 17**
